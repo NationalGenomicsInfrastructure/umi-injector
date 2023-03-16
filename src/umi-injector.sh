@@ -38,7 +38,7 @@ help() {
                 "-3 / --out1=" "path to write the output to"   "${out1}" \
                 "-4 / --out2=" "optional output for the mated reads"   "${out2}" \
                 "-u / --umi=" "FastQ file with the matched UMIs"   "${umi}" \
-                "-n / --threads=" "threads for parallel (de)compression"   "${threads}" \
+                "-n / --threads=" "PER FILE threads for (de)compression"   "${threads}" \
                 "-s / --sep=" "separator between readname and UMI"   "${sep}" 
     echo -e "\n  Lycka till, ${USER}!"
     exit 0; }
@@ -83,9 +83,54 @@ for arg in in1 out1 umi $(paired) ; do
 done
 if [ -n "${missing}" ] ; then
     arg_invalid "${missing##,} must be provided!" #trim the first comma from missing
-fi;
+fi
 
+
+###### handle both, compressed and uncompressed input & output #####################################
+
+# quoting is necessary here: see https://stackoverflow.com/a/52538533 and https://www.vidarholen.net/contents/blog/?p=716
+
+for input in ${in1} ${umi} ${in2}; do
+    if [[ $(file "$input") == *"compressed"* ]]; then
+        filehandles+=("gzip -dc \"$input\" | head")
+    else
+        filehandles+=("cat \"$input\" | head")
+    fi
+done
+
+for output in ${out1} ${out2}; do
+    if [[ "$output" == *".gz" ]]; then
+        outhandles+=("1") #set 1 for compressed output
+    else
+        outhandles+=("0") #set 0 for uncompressed output
+    fi
+done
 
 ###### process the files with awk and paste ########################################################
 
-echo "Work in progress!"
+
+if [[ "$SKIP_CLUMPIFY" = false ]]; then
+
+    # paired version
+
+    paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) <(eval ${filehandles[2]}) | paste - - - - | \
+    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} -v out2="${out2}" -v out2h=${outhandles[1]} \
+    'BEGIN{OFS="\n"; \
+    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("gzip -9 > %s", out1)}; \
+    {if(out2h==0) output2=sprintf("tee > %s", out2); else output2=sprintf("gzip -9 > %s", out2)}}; \
+    match($1,/@[A-Z0-9:]+/) {print substr( $1, RSTART, RLENGTH )":"$5substr( $1, RSTART+RLENGTH ),$4,"+",$10 | output1};
+    match($3,/@[A-Z0-9:]+/) {print substr( $3, RSTART, RLENGTH )":"$5" 2"substr( $3, RSTART+RLENGTH+2),$6,"+",$12 | output2}'
+
+else
+
+    # single file version
+
+    echo "Single"
+
+    paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) | paste - - - - | \
+    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} \
+    'BEGIN{OFS="\n"; \
+    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("gzip -9 > %s", out1)}}; \
+    match($1,/@[A-Z0-9:]+/){print substr( $1, RSTART, RLENGTH )":"$4substr( $1, RSTART+RLENGTH ),$3,"+",$7 | output1}'
+
+fi
