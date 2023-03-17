@@ -20,6 +20,7 @@ arg_invalid() { echo -e "\x01\033[1;31m\x02 Error: $* \x01\033[0m\x02" >&2; exit
 arg_required() { if [ -z "$OPTARG" ]; then arg_invalid "No argument was provided for the -$OPT option"; fi; }
 arg_requirevalid() { if [[ ! -e "$OPTARG" ]] && [[ ! -L "$OPTARG" ]]; then arg_invalid "Argument to -$OPT option is not a valid file"; fi; }
 arg_overwrite() { if [ -e "$OPTARG" ]; then arg_invalid " $OPTARG already exists! Please choose -$OPT differently"; fi; }
+arg_numeric() { if [ ! -z ${OPTARG//[[:digit:]]/} ]; then arg_invalid "The argument to -$OPT needs to be numeric"; fi; }  #removes all digits; it wasn't numeric if something remains.
 arg_dispensable() { if [ -n "$OPTARG" ]; then arg_invalid "No argument is allowed for the -$OPT option"; fi; }
 paired() { if [[ -n "$in2" ]] || [[ -n "$out2" ]]; then paired=true; echo "in2 out2"; fi; } # If either pair option in set, they must have arguments as well. 
 set_defaults() { verbose="${verbose:-false}"; threads="${threads:-1}"; sep="${sep:-:}"; }
@@ -62,7 +63,7 @@ do
         3 | out1 )      arg_required; arg_overwrite; out1="$OPTARG" ;;
         4 | out2 )      arg_required; arg_overwrite; out2="$OPTARG" ;;
         u | umi )       arg_required; arg_requirevalid; umi="$OPTARG" ;;
-        n | threads )   arg_required; threads="$OPTARG" ;;
+        n | threads )   arg_required; arg_numeric; threads="$OPTARG" ;;
         s | sep )       arg_required; sep="$OPTARG" ;;
         ??* )           arg_invalid "Invalid option --$OPT" ;;  # bad long option. 
         ? )             exit 2 ;;  # bad short option (getopts will throw an error.)
@@ -92,7 +93,7 @@ fi
 
 for input in ${in1} ${umi} ${in2}; do
     if [[ $(file "$input") == *"compressed"* ]]; then
-        filehandles+=("gzip -dc \"$input\" | head")
+        filehandles+=("pigz -cd -p ${threads} \"$input\" | head")
     else
         filehandles+=("cat \"$input\" | head")
     fi
@@ -114,10 +115,10 @@ if [[ "$SKIP_CLUMPIFY" = false ]]; then
     # paired version
 
     paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) <(eval ${filehandles[2]}) | paste - - - - | \
-    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} -v out2="${out2}" -v out2h=${outhandles[1]} \
+    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} -v out2="${out2}" -v out2h=${outhandles[1]} -v threads="${threads}" \
     'BEGIN{OFS="\n"; \
-    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("gzip -9 > %s", out1)}; \
-    {if(out2h==0) output2=sprintf("tee > %s", out2); else output2=sprintf("gzip -9 > %s", out2)}}; \
+    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("pigz -p %d > %s", threads , out1)}; \
+    {if(out2h==0) output2=sprintf("tee > %s", out2); else output2=sprintf("pigz -p %d > %s", threads , out2)}}; \
     match($1,/@[A-Z0-9:]+/) {print substr( $1, RSTART, RLENGTH )":"$5substr( $1, RSTART+RLENGTH ),$4,"+",$10 | output1};
     match($3,/@[A-Z0-9:]+/) {print substr( $3, RSTART, RLENGTH )":"$5" 2"substr( $3, RSTART+RLENGTH+2),$6,"+",$12 | output2}'
 
@@ -125,12 +126,10 @@ else
 
     # single file version
 
-    echo "Single"
-
     paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) | paste - - - - | \
-    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} \
+    awk -F "\t" -v out1="${out1}" -v out1h=${outhandles[0]} -v threads="${threads}" \
     'BEGIN{OFS="\n"; \
-    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("gzip -9 > %s", out1)}}; \
+    {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("pigz -p %d > %s", threads , out1)}}; \
     match($1,/@[A-Z0-9:]+/){print substr( $1, RSTART, RLENGTH )":"$4substr( $1, RSTART+RLENGTH ),$3,"+",$7 | output1}'
 
 fi
