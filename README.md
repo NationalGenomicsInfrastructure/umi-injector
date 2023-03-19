@@ -34,7 +34,8 @@ umi-injector.sh --in1=./test_data/read1.fastq.gz --in2=./test_data/read1.fastq.g
 
 To print all available options and defaults to the console, run  `--help` or `-h`.
 
-![`./src/umi-injector.sh --h`](docs/help.svg)
+<img src="docs/help.svg" alt="Help display of umi-injector" style="width:100%;"/>
+
 
 ## Building the containerized versions
 

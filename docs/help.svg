@@ -1,128 +1,851 @@
-<svg class="rich-terminal" viewBox="0 0 1092 489.2" xmlns="http://www.w3.org/2000/svg">
-    <!-- Generated with Rich https://www.textualize.io -->
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="rich-terminal"
+   viewBox="0 0 1092 489.2"
+   version="1.1"
+   id="svg1064"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Generated with Rich https://www.textualize.io -->
+  <style
+     id="style824">
 
     @font-face {
-        font-family: "Fira Code";
-        src: local("FiraCode-Regular"),
-                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
-                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-family: &quot;Fira Code&quot;;
+        src: local(&quot;FiraCode-Regular&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2&quot;) format(&quot;woff2&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff&quot;) format(&quot;woff&quot;);
         font-style: normal;
         font-weight: 400;
     }
     @font-face {
-        font-family: "Fira Code";
-        src: local("FiraCode-Bold"),
-                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
-                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-family: &quot;Fira Code&quot;;
+        src: local(&quot;FiraCode-Bold&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2&quot;) format(&quot;woff2&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff&quot;) format(&quot;woff&quot;);
         font-style: bold;
         font-weight: 700;
     }
 
-    .terminal-2249971813-matrix {
+    .terminal-1085922282-matrix {
         font-family: Fira Code, monospace;
         font-size: 20px;
         line-height: 24.4px;
         font-variant-east-asian: full-width;
     }
 
-    .terminal-2249971813-title {
+    .terminal-1085922282-title {
         font-size: 18px;
         font-weight: bold;
         font-family: arial;
     }
 
-    .terminal-2249971813-r1 { fill: #d9d9d9 }
-.terminal-2249971813-r2 { fill: #9d65ff;font-weight: bold }
-.terminal-2249971813-r3 { fill: #878787 }
+    .terminal-1085922282-r1 { fill: #d9d9d9 }
+.terminal-1085922282-r2 { fill: #9d65ff;font-weight: bold }
+.terminal-1085922282-r3 { fill: #878787 }
     </style>
-
-    <defs>
-    <clipPath id="terminal-2249971813-clip-terminal">
-      <rect x="0" y="0" width="1072.6" height="438.2" />
+  <defs
+     id="defs880">
+    <clipPath
+       id="terminal-1085922282-clip-terminal">
+      <rect
+         x="0"
+         y="0"
+         width="1072.6"
+         height="438.2"
+         id="rect826" />
     </clipPath>
-    <clipPath id="terminal-2249971813-line-0">
-    <rect x="0" y="1.5" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-1">
-    <rect x="0" y="25.9" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-2">
-    <rect x="0" y="50.3" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-3">
-    <rect x="0" y="74.7" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-4">
-    <rect x="0" y="99.1" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-5">
-    <rect x="0" y="123.5" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-6">
-    <rect x="0" y="147.9" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-7">
-    <rect x="0" y="172.3" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-8">
-    <rect x="0" y="196.7" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-9">
-    <rect x="0" y="221.1" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-10">
-    <rect x="0" y="245.5" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-11">
-    <rect x="0" y="269.9" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-12">
-    <rect x="0" y="294.3" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-13">
-    <rect x="0" y="318.7" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-14">
-    <rect x="0" y="343.1" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-15">
-    <rect x="0" y="367.5" width="1073.6" height="24.65"/>
-            </clipPath>
-<clipPath id="terminal-2249971813-line-16">
-    <rect x="0" y="391.9" width="1073.6" height="24.65"/>
-            </clipPath>
-    </defs>
-
-    <rect fill="#0c0c0c" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1090" height="487.2" rx="8"/>
-            <g transform="translate(26,22)">
-            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
-            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
-            <circle cx="44" cy="0" r="7" fill="#28c840"/>
-            </g>
-        
-    <g transform="translate(9, 41)" clip-path="url(#terminal-2249971813-clip-terminal)">
-    <rect fill="#625e4c" x="24.4" y="147.9" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="172.3" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="196.7" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="221.1" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="245.5" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="269.9" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="294.3" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="318.7" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="343.1" width="207.4" height="24.65" shape-rendering="crispEdges"/><rect fill="#625e4c" x="24.4" y="367.5" width="207.4" height="24.65" shape-rendering="crispEdges"/>
-    <g class="terminal-2249971813-matrix">
-    <text class="terminal-2249971813-r1" x="0" y="20" textLength="329.4" clip-path="url(#terminal-2249971813-line-0)">$&#160;./src/umi-injector.sh&#160;--h</text><text class="terminal-2249971813-r1" x="1073.6" y="20" textLength="12.2" clip-path="url(#terminal-2249971813-line-0)">
-</text><text class="terminal-2249971813-r1" x="1073.6" y="44.4" textLength="12.2" clip-path="url(#terminal-2249971813-line-1)">
-</text><text class="terminal-2249971813-r1" x="1073.6" y="68.8" textLength="12.2" clip-path="url(#terminal-2249971813-line-2)">
-</text><text class="terminal-2249971813-r1" x="0" y="93.2" textLength="24.4" clip-path="url(#terminal-2249971813-line-3)">&#160;</text><text class="terminal-2249971813-r2" x="12.2" y="93.2" textLength="268.4" clip-path="url(#terminal-2249971813-line-3)">&#160;umi-injector&#160;0.0.1&#160;</text><text class="terminal-2249971813-r1" x="256.2" y="93.2" textLength="12.2" clip-path="url(#terminal-2249971813-line-3)"></text><text class="terminal-2249971813-r1" x="1073.6" y="93.2" textLength="12.2" clip-path="url(#terminal-2249971813-line-3)">
-</text><text class="terminal-2249971813-r1" x="0" y="117.6" textLength="1073.6" clip-path="url(#terminal-2249971813-line-4)">&#160;&#160;integrates&#160;UMI&#160;sequences&#160;from&#160;a&#160;third&#160;FastQ&#160;file&#160;into&#160;the&#160;read&#160;names&#160;of&#160;paired&#160;FastQs.</text><text class="terminal-2249971813-r1" x="1073.6" y="117.6" textLength="12.2" clip-path="url(#terminal-2249971813-line-4)">
-</text><text class="terminal-2249971813-r1" x="1073.6" y="142" textLength="12.2" clip-path="url(#terminal-2249971813-line-5)">
-</text><text class="terminal-2249971813-r1" x="0" y="166.4" textLength="36.6" clip-path="url(#terminal-2249971813-line-6)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="166.4" textLength="231.8" clip-path="url(#terminal-2249971813-line-6)">&#160;-h&#160;/&#160;--help&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="166.4" textLength="512.4" clip-path="url(#terminal-2249971813-line-6)">&#160;prints&#160;this&#160;help.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="166.4" textLength="48.8" clip-path="url(#terminal-2249971813-line-6)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="166.4" textLength="24.4" clip-path="url(#terminal-2249971813-line-6)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="166.4" textLength="12.2" clip-path="url(#terminal-2249971813-line-6)">
-</text><text class="terminal-2249971813-r1" x="0" y="190.8" textLength="36.6" clip-path="url(#terminal-2249971813-line-7)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="190.8" textLength="231.8" clip-path="url(#terminal-2249971813-line-7)">&#160;-v&#160;/&#160;--verbose&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="190.8" textLength="512.4" clip-path="url(#terminal-2249971813-line-7)">&#160;reports&#160;some&#160;statistics&#160;to&#160;stdout&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="190.8" textLength="109.8" clip-path="url(#terminal-2249971813-line-7)">&#160;false&#160;</text><text class="terminal-2249971813-r1" x="805.2" y="190.8" textLength="24.4" clip-path="url(#terminal-2249971813-line-7)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="190.8" textLength="12.2" clip-path="url(#terminal-2249971813-line-7)">
-</text><text class="terminal-2249971813-r1" x="0" y="215.2" textLength="36.6" clip-path="url(#terminal-2249971813-line-8)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="215.2" textLength="231.8" clip-path="url(#terminal-2249971813-line-8)">&#160;-1&#160;/&#160;--in1=&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="215.2" textLength="512.4" clip-path="url(#terminal-2249971813-line-8)">&#160;path&#160;to&#160;a&#160;FastQ&#160;file&#160;with&#160;reads&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="215.2" textLength="48.8" clip-path="url(#terminal-2249971813-line-8)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="215.2" textLength="24.4" clip-path="url(#terminal-2249971813-line-8)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="215.2" textLength="12.2" clip-path="url(#terminal-2249971813-line-8)">
-</text><text class="terminal-2249971813-r1" x="0" y="239.6" textLength="36.6" clip-path="url(#terminal-2249971813-line-9)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="239.6" textLength="231.8" clip-path="url(#terminal-2249971813-line-9)">&#160;-2&#160;/&#160;--in2=&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="239.6" textLength="512.4" clip-path="url(#terminal-2249971813-line-9)">&#160;optional&#160;FastQ&#160;file&#160;with&#160;mates&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="239.6" textLength="48.8" clip-path="url(#terminal-2249971813-line-9)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="239.6" textLength="24.4" clip-path="url(#terminal-2249971813-line-9)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="239.6" textLength="12.2" clip-path="url(#terminal-2249971813-line-9)">
-</text><text class="terminal-2249971813-r1" x="0" y="264" textLength="36.6" clip-path="url(#terminal-2249971813-line-10)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="264" textLength="231.8" clip-path="url(#terminal-2249971813-line-10)">&#160;-3&#160;/&#160;--out1=&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="264" textLength="512.4" clip-path="url(#terminal-2249971813-line-10)">&#160;path&#160;to&#160;write&#160;the&#160;output&#160;to&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="264" textLength="48.8" clip-path="url(#terminal-2249971813-line-10)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="264" textLength="24.4" clip-path="url(#terminal-2249971813-line-10)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="264" textLength="12.2" clip-path="url(#terminal-2249971813-line-10)">
-</text><text class="terminal-2249971813-r1" x="0" y="288.4" textLength="36.6" clip-path="url(#terminal-2249971813-line-11)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="288.4" textLength="231.8" clip-path="url(#terminal-2249971813-line-11)">&#160;-4&#160;/&#160;--out2=&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="288.4" textLength="512.4" clip-path="url(#terminal-2249971813-line-11)">&#160;optional&#160;output&#160;for&#160;the&#160;mated&#160;reads&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="288.4" textLength="48.8" clip-path="url(#terminal-2249971813-line-11)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="288.4" textLength="24.4" clip-path="url(#terminal-2249971813-line-11)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="288.4" textLength="12.2" clip-path="url(#terminal-2249971813-line-11)">
-</text><text class="terminal-2249971813-r1" x="0" y="312.8" textLength="36.6" clip-path="url(#terminal-2249971813-line-12)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="312.8" textLength="231.8" clip-path="url(#terminal-2249971813-line-12)">&#160;-u&#160;/&#160;--umi=&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="312.8" textLength="512.4" clip-path="url(#terminal-2249971813-line-12)">&#160;FastQ&#160;file&#160;with&#160;the&#160;matched&#160;UMIs&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="312.8" textLength="48.8" clip-path="url(#terminal-2249971813-line-12)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="312.8" textLength="24.4" clip-path="url(#terminal-2249971813-line-12)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="312.8" textLength="12.2" clip-path="url(#terminal-2249971813-line-12)">
-</text><text class="terminal-2249971813-r1" x="0" y="337.2" textLength="36.6" clip-path="url(#terminal-2249971813-line-13)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="337.2" textLength="231.8" clip-path="url(#terminal-2249971813-line-13)">&#160;-l&#160;/&#160;--logfile=&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="337.2" textLength="512.4" clip-path="url(#terminal-2249971813-line-13)">&#160;optional&#160;path&#160;to&#160;logfile&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="337.2" textLength="48.8" clip-path="url(#terminal-2249971813-line-13)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="744.2" y="337.2" textLength="24.4" clip-path="url(#terminal-2249971813-line-13)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="337.2" textLength="12.2" clip-path="url(#terminal-2249971813-line-13)">
-</text><text class="terminal-2249971813-r1" x="0" y="361.6" textLength="36.6" clip-path="url(#terminal-2249971813-line-14)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="361.6" textLength="231.8" clip-path="url(#terminal-2249971813-line-14)">&#160;-n&#160;/&#160;--threads=&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="361.6" textLength="512.4" clip-path="url(#terminal-2249971813-line-14)">&#160;PER&#160;FILE&#160;threads&#160;for&#160;(de)compression&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="361.6" textLength="61" clip-path="url(#terminal-2249971813-line-14)">&#160;1&#160;</text><text class="terminal-2249971813-r1" x="756.4" y="361.6" textLength="24.4" clip-path="url(#terminal-2249971813-line-14)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="361.6" textLength="12.2" clip-path="url(#terminal-2249971813-line-14)">
-</text><text class="terminal-2249971813-r1" x="0" y="386" textLength="36.6" clip-path="url(#terminal-2249971813-line-15)">&#160;&#160;</text><text class="terminal-2249971813-r1" x="24.4" y="386" textLength="231.8" clip-path="url(#terminal-2249971813-line-15)">&#160;-s&#160;/&#160;--sep=&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r1" x="231.8" y="386" textLength="512.4" clip-path="url(#terminal-2249971813-line-15)">&#160;separator&#160;between&#160;readname&#160;and&#160;UMI&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2249971813-r3" x="719.8" y="386" textLength="61" clip-path="url(#terminal-2249971813-line-15)">&#160;:&#160;</text><text class="terminal-2249971813-r1" x="756.4" y="386" textLength="24.4" clip-path="url(#terminal-2249971813-line-15)">&#160;</text><text class="terminal-2249971813-r1" x="1073.6" y="386" textLength="12.2" clip-path="url(#terminal-2249971813-line-15)">
-</text><text class="terminal-2249971813-r1" x="1073.6" y="410.4" textLength="12.2" clip-path="url(#terminal-2249971813-line-16)">
-</text><text class="terminal-2249971813-r1" x="0" y="434.8" textLength="256.2" clip-path="url(#terminal-2249971813-line-17)">&#160;&#160;Lycka&#160;till,&#160;runner!</text><text class="terminal-2249971813-r1" x="1073.6" y="434.8" textLength="12.2" clip-path="url(#terminal-2249971813-line-17)">
-</text>
+    <clipPath
+       id="terminal-1085922282-line-0">
+      <rect
+         x="0"
+         y="1.5"
+         width="1073.6"
+         height="24.65"
+         id="rect829" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-1">
+      <rect
+         x="0"
+         y="25.9"
+         width="1073.6"
+         height="24.65"
+         id="rect832" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-2">
+      <rect
+         x="0"
+         y="50.3"
+         width="1073.6"
+         height="24.65"
+         id="rect835" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-3">
+      <rect
+         x="0"
+         y="74.7"
+         width="1073.6"
+         height="24.65"
+         id="rect838" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-4">
+      <rect
+         x="0"
+         y="99.1"
+         width="1073.6"
+         height="24.65"
+         id="rect841" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-5">
+      <rect
+         x="0"
+         y="123.5"
+         width="1073.6"
+         height="24.65"
+         id="rect844" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-6">
+      <rect
+         x="0"
+         y="147.9"
+         width="1073.6"
+         height="24.65"
+         id="rect847" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-7">
+      <rect
+         x="0"
+         y="172.3"
+         width="1073.6"
+         height="24.65"
+         id="rect850" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-8">
+      <rect
+         x="0"
+         y="196.7"
+         width="1073.6"
+         height="24.65"
+         id="rect853" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-9">
+      <rect
+         x="0"
+         y="221.1"
+         width="1073.6"
+         height="24.65"
+         id="rect856" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-10">
+      <rect
+         x="0"
+         y="245.5"
+         width="1073.6"
+         height="24.65"
+         id="rect859" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-11">
+      <rect
+         x="0"
+         y="269.9"
+         width="1073.6"
+         height="24.65"
+         id="rect862" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-12">
+      <rect
+         x="0"
+         y="294.3"
+         width="1073.6"
+         height="24.65"
+         id="rect865" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-13">
+      <rect
+         x="0"
+         y="318.7"
+         width="1073.6"
+         height="24.65"
+         id="rect868" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-14">
+      <rect
+         x="0"
+         y="343.1"
+         width="1073.6"
+         height="24.65"
+         id="rect871" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-15">
+      <rect
+         x="0"
+         y="367.5"
+         width="1073.6"
+         height="24.65"
+         id="rect874" />
+    </clipPath>
+    <clipPath
+       id="terminal-1085922282-line-16">
+      <rect
+         x="0"
+         y="391.9"
+         width="1073.6"
+         height="24.65"
+         id="rect877" />
+    </clipPath>
+  </defs>
+  <rect
+     fill="#0c0c0c"
+     stroke="rgba(255,255,255,0.35)"
+     stroke-width="1"
+     x="1"
+     y="1"
+     width="1090"
+     height="487.2"
+     rx="8"
+     id="rect882" />
+  <g
+     transform="translate(26,22)"
+     id="g890">
+    <circle
+       cx="0"
+       cy="0"
+       r="7"
+       fill="#ff5f57"
+       id="circle884" />
+    <circle
+       cx="22"
+       cy="0"
+       r="7"
+       fill="#febc2e"
+       id="circle886" />
+    <circle
+       cx="44"
+       cy="0"
+       r="7"
+       fill="#28c840"
+       id="circle888" />
+  </g>
+  <g
+     transform="translate(9, 41)"
+     clip-path="url(#terminal-1085922282-clip-terminal)"
+     id="g1062">
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="147.9"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect892" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="172.3"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect894" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="196.7"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect896" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="221.1"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect898" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="245.5"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect900" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="269.9"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect902" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="294.3"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect904" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="318.7"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect906" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="343.1"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect908" />
+    <rect
+       fill="#625e4c"
+       x="24.4"
+       y="367.5"
+       width="207.4"
+       height="24.65"
+       shape-rendering="crispEdges"
+       id="rect910" />
+    <g
+       class="terminal-1085922282-matrix"
+       id="g1060">
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="20"
+         textLength="329.4"
+         clip-path="url(#terminal-1085922282-line-0)"
+         id="text912">$ ./src/umi-injector.sh --h</text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="20"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-0)"
+         id="text914" />
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="44.4"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-1)"
+         id="text916" />
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="68.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-2)"
+         id="text918" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="93.2"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-3)"
+         id="text920"> </text>
+      <text
+         class="terminal-1085922282-r2"
+         x="12.2"
+         y="93.2"
+         textLength="268.4"
+         clip-path="url(#terminal-1085922282-line-3)"
+         id="text922"> umi-injector 0.0.1 </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="256.2"
+         y="93.2"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-3)"
+         id="text924" />
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="93.2"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-3)"
+         id="text926" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="117.6"
+         textLength="1073.6"
+         clip-path="url(#terminal-1085922282-line-4)"
+         id="text928">  integrates UMI sequences from a third FastQ file into the read names of paired FastQs.</text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="117.6"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-4)"
+         id="text930" />
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="142"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-5)"
+         id="text932" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="166.4"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text934">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="166.4"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text936"> -h / --help     </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="166.4"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text938"> prints this help.                      </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="166.4"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text940">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="166.4"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text942"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="166.4"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-6)"
+         id="text944" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="190.8"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text946">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="190.8"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text948"> -v / --verbose  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="190.8"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text950"> reports some statistics to stdout      </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="190.8"
+         textLength="109.8"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text952"> false </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="805.2"
+         y="190.8"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text954"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="190.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-7)"
+         id="text956" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="215.2"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text958">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="215.2"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text960"> -1 / --in1=     </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="215.2"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text962"> path to a FastQ file with reads        </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="215.2"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text964">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="215.2"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text966"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="215.2"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-8)"
+         id="text968" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="239.6"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text970">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="239.6"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text972"> -2 / --in2=     </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="239.6"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text974"> optional FastQ file with mates         </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="239.6"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text976">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="239.6"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text978"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="239.6"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-9)"
+         id="text980" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="264"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text982">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="264"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text984"> -3 / --out1=    </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="264"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text986"> path to write the output to            </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="264"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text988">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="264"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text990"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="264"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-10)"
+         id="text992" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="288.4"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text994">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="288.4"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text996"> -4 / --out2=    </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="288.4"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text998"> optional output for the mated reads    </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="288.4"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text1000">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="288.4"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text1002"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="288.4"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-11)"
+         id="text1004" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="312.8"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1006">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="312.8"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1008"> -u / --umi=     </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="312.8"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1010"> FastQ file with the matched UMIs       </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="312.8"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1012">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="312.8"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1014"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="312.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-12)"
+         id="text1016" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="337.2"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1018">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="337.2"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1020"> -l / --logfile= </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="337.2"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1022"> optional path to logfile               </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="337.2"
+         textLength="48.8"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1024">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="744.2"
+         y="337.2"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1026"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="337.2"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-13)"
+         id="text1028" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="361.6"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1030">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="361.6"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1032"> -n / --threads= </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="361.6"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1034"> PER FILE threads for (de)compression   </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="361.6"
+         textLength="61"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1036"> 1 </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="756.4"
+         y="361.6"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1038"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="361.6"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-14)"
+         id="text1040" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="386"
+         textLength="36.6"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1042">  </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="24.4"
+         y="386"
+         textLength="231.8"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1044"> -s / --sep=     </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="231.8"
+         y="386"
+         textLength="512.4"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1046"> separator between readname and UMI     </text>
+      <text
+         class="terminal-1085922282-r3"
+         x="719.8"
+         y="386"
+         textLength="61"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1048"> : </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="756.4"
+         y="386"
+         textLength="24.4"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1050"> </text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="386"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-15)"
+         id="text1052" />
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="410.4"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-16)"
+         id="text1054" />
+      <text
+         class="terminal-1085922282-r1"
+         x="0"
+         y="434.8"
+         textLength="366"
+         clip-path="url(#terminal-1085922282-line-17)"
+         id="text1056">  Lycka till, matthias.zepper!</text>
+      <text
+         class="terminal-1085922282-r1"
+         x="1073.6"
+         y="434.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1085922282-line-17)"
+         id="text1058" />
     </g>
-    </g>
+  </g>
 </svg>

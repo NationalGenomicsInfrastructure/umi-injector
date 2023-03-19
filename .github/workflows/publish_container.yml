@@ -9,6 +9,8 @@ on:
     types: [published]
     tags: [ 'v*.*.*' ]
 
+  workflow_dispatch:
+
 jobs:
   push_to_registry:
     if: github.repository == 'NationalGenomicsInfrastructure/umi-injector'
