@@ -30,7 +30,7 @@ set_defaults() { verbose="${verbose:-false}"; log="${logger:-}"; threads="${thre
 help() { 
     echo -e "\n\n \x01\033[1;34m\x02 umi-injector $version \x01\033[0m\x02";
     echo -e "  integrates UMI sequences from a third FastQ file into the read names of paired FastQs.\n"
-    strfmt="  \x01\033[0;100m\x02 %-15s \x01\033[0m\x02 %-37s \x01\033[2m\x02 %s \x01\033[0m\x02 \n"
+    strfmt="  \x01\033[0;100m\x02 %-15s \x01\033[0m\x02 %-38s \x01\033[2m\x02 %s \x01\033[0m\x02 \n"
     printf "${strfmt}" \
                 "-h / --help"  "prints this help."  "" \
                 "-v / --verbose"  "reports some statistics to stdout"   "${verbose}" \
