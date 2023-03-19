@@ -1,0 +1,9 @@
+{
+ "version" : "0.0.1",
+ "records" : "25",
+ "separator" : ":",
+ "io_1" : ["test_data/read1.fastq.gz","test_data/read1_umi.fastq.gz"],
+ "header_1" : ["@A00689:468:H2CKFDSX3:1:1101:27796:1031 1:N:0:CCAACTGTAT+GCGCTAGAGA","@A00689:468:H2CKFDSX3:1:1101:27796:1031:AGCCTGAGA 1:N:0:CCAACTGTAT+GCGCTAGAGA"],
+ "io_2" : ["test_data/read2.fastq.gz","test_data/read2_umi.fastq.gz"],
+ "header_2" : ["@A00689:468:H2CKFDSX3:1:1101:27796:1031 3:N:0:CCAACTGTAT+GCGCTAGAGA","@A00689:468:H2CKFDSX3:1:1101:27796:1031:AGCCTGAGA 2:N:0:CCAACTGTAT+GCGCTAGAGA"]
+}

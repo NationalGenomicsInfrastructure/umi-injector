@@ -39,7 +39,7 @@ help() {
                 "-3 / --out1=" "path to write the output to"   "${out1}" \
                 "-4 / --out2=" "optional output for the mated reads"   "${out2}" \
                 "-u / --umi=" "FastQ file with the matched UMIs"   "${umi}" \
-                "-l / --log=" "optional path to logfile"   "${logger}" \
+                "-l / --logfile=" "optional path to logfile"   "${logger}" \
                 "-n / --threads=" "PER FILE threads for (de)compression"   "${threads}" \
                 "-s / --sep=" "separator between readname and UMI"   "${sep}" 
     echo -e "\n  Lycka till, ${USER}!"
@@ -64,7 +64,7 @@ do
         3 | out1 )      arg_required; arg_overwrite; out1="$OPTARG" ;;
         4 | out2 )      arg_required; arg_overwrite; out2="$OPTARG" ;;
         u | umi )       arg_required; arg_requirevalid; umi="$OPTARG" ;;
-        l | log )       arg_required; logger="$OPTARG" ;;
+        l | logfile )       arg_required; logger="$OPTARG" ;;
         n | threads )   arg_required; arg_numeric; threads="$OPTARG" ;;
         s | sep )       arg_required; sep="$OPTARG" ;;
         ??* )           arg_invalid "Invalid option --$OPT" ;;  # bad long option. 
@@ -117,24 +117,24 @@ if [[ -n "$in2" ]]; then
     # paired version
 
     paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) <(eval ${filehandles[2]}) | paste - - - - | \
-    awk -F "\t" -v in1="${in1}" -v out1="${out1}" -v out1h=${outhandles[0]} -v in2="${in2}" -v out2="${out2}" -v out2h=${outhandles[1]} -v threads="${threads}" -v version="$version" -v logger="$logger" \
+    awk -F "\t" -v in1="${in1}" -v out1="${out1}" -v out1h=${outhandles[0]} -v in2="${in2}" -v out2="${out2}" -v out2h=${outhandles[1]} -v threads="${threads}" -v sep="${sep}" -v version="$version" -v logger="$logger" \
     'BEGIN{OFS="\n"; \
     {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("pigz -p %d > %s", threads , out1)}; \
     {if(out2h==0) output2=sprintf("tee > %s", out2); else output2=sprintf("pigz -p %d > %s", threads , out2)}}; \
-    match($1,/@[A-Z0-9:]+/) {headerold1=$1; headernew1=substr( $1, RSTART, RLENGTH )":"$5substr( $1, RSTART+RLENGTH )}{print headernew1,$4,"+",$10 | output1};
-    match($3,/@[A-Z0-9:]+/) {headerold2=$3; headernew2=substr( $3, RSTART, RLENGTH )":"$5" 2"substr( $3, RSTART+RLENGTH+2)}{print headernew2,$6,"+",$12 | output2}; \
-    END{if(logger!="") printf sprintf("{\n \"version\" : \"%s\",\n \"records\" : \"%s\",\n \"io_1\" : [\"%s\",\"%s\"],\n \"header_1\" : [\"%s\",\"%s\"],\n \"io_2\" : [\"%s\",\"%s\"],\n \"header_2\" : [\"%s\",\"%s\"]\n}",version,NR,in1,out1,headerold1,headernew1,in2,out2,headerold2,headernew2) >> logger }'
+    match($1,/@[A-Z0-9:]+/) {headerold1=$1; headernew1=substr( $1, RSTART, RLENGTH )sep$5substr( $1, RSTART+RLENGTH )}{print headernew1,$4,"+",$10 | output1};
+    match($3,/@[A-Z0-9:]+/) {headerold2=$3; headernew2=substr( $3, RSTART, RLENGTH )sep$5" 2"substr( $3, RSTART+RLENGTH+2)}{print headernew2,$6,"+",$12 | output2}; \
+    END{if(logger!="") printf sprintf("{\n \"version\" : \"%s\",\n \"records\" : \"%s\",\n \"separator\" : \"%s\",\n \"io_1\" : [\"%s\",\"%s\"],\n \"header_1\" : [\"%s\",\"%s\"],\n \"io_2\" : [\"%s\",\"%s\"],\n \"header_2\" : [\"%s\",\"%s\"]\n}",version,NR,sep,in1,out1,headerold1,headernew1,in2,out2,headerold2,headernew2) >> logger }'
 
 else
 
     # single file version
 
     paste <(eval ${filehandles[0]}) <(eval ${filehandles[1]}) | paste - - - - | \
-    awk -F "\t" -v in1="${in1}" -v out1="${out1}" -v out1h=${outhandles[0]} -v threads="${threads}" -v version="$version" -v logger="$logger" \
+    awk -F "\t" -v in1="${in1}" -v out1="${out1}" -v out1h=${outhandles[0]} -v threads="${threads}" -v sep="${sep}" -v version="$version" -v logger="$logger" \
     'BEGIN{OFS="\n"; \
     {if(out1h==0) output1=sprintf("tee > %s", out1); else output1=sprintf("pigz -p %d > %s", threads , out1)}}; \
-    match($1,/@[A-Z0-9:]+/){headerold=$1;headernew=substr( $1, RSTART, RLENGTH )":"$4substr( $1, RSTART+RLENGTH)}{print headernew,$3,"+",$7 | output1}; \
-    END{if(logger!="") printf sprintf("{\n \"version\" : \"%s\",\n \"records\" : \"%s\",\n \"io_1\" : [\"%s\",\"%s\"],\n \"header_1\" : [\"%s\",\"%s\"]\n}",version,NR,in1,out1,headerold,headernew) >> logger }'
+    match($1,/@[A-Z0-9:]+/){headerold=$1;headernew=substr( $1, RSTART, RLENGTH )sep$4substr( $1, RSTART+RLENGTH)}{print headernew,$3,"+",$7 | output1}; \
+    END{if(logger!="") printf sprintf("{\n \"version\" : \"%s\",\n \"records\" : \"%s\",\n \"separator\" : \"%s\",\n \"io_1\" : [\"%s\",\"%s\"],\n \"header_1\" : [\"%s\",\"%s\"]\n}",version,NR,sep,in1,out1,headerold,headernew) >> logger }'
 
 fi
 end=`date +%s`

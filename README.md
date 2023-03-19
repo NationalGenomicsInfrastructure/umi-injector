@@ -2,6 +2,40 @@
 
 **umi-injector** integrates UMI sequences from a separate FastQ file into the read headers of a single or paired FastQ.
 
+## Run umi-injector
+
+Essentially, **umi-injector** is just a bash script that wraps the tools `awk`, `pigz` and `file`. Unless you run the containerized version, those need to be installed on your system.
+
+You must at least provide three arguments:  `--in1`, `--out1` and `--umi` (or their equivalent shorthands `-1`, `-3` and `-u`).:
+
+```bash
+umi-injector.sh --in1="./test_data/read1.fastq.gz" --umi="./test_data/umi.fastq.gz" --out1="./test_data/read1_umi.fastq.gz" 
+# equivalent to
+umi-injector.sh -1 ./test_data/read1.fastq.gz -u ./test_data/umi.fastq.gz -3 ./test_data/read1_umi.fastq.gz
+```
+
+![`./src/umi-injector.sh --in1="./test_data/read1.fastq.gz" --umi="./test_data/umi.fastq.gz" --out1="./test_data/read1_umi.fastq.gz"`](docs/minimal.svg)
+
+Whatever DNA sequence is provided as `--umi` will be integrated into the header of the reads in `--in1`. You can provide both, compressed and uncompressed input & output and even mix both arbitrarily.
+
+The script will run a few basic validators on the provided arguments, but not corroborate matching read IDs. Thus, ensure that the files are sorted in a consistent order, otherwise the wrong UMIs will be integrated into the reads.
+
+You can specify `--sep=` to choose a different UMI separator than the default colon. For [umi-tools dedup](https://umi-tools.readthedocs.io/en/latest/), you will, for example, need to separate UMIs by an underscore.
+
+`--threads` will set the number of cores used by **each** pigz process. For every compressed file that you read or write, this number of threads will be used.
+
+`--logfile` allows you to output a small log file in JSON format. The log will comprise the number of records processed and a sample header to assess the introduced changes. At the moment, `--verbose` just prints the runtime to the console.
+
+```bash
+umi-injector.sh --in1=./test_data/read1.fastq.gz --in2=./test_data/read1.fastq.gz --umi=./test_data/umi.fastq.gz --out1=./test_data/read1_umi.fastq.gz --out2=./test_data/read2_umi.fastq.gz --sep="_" --logfile="./logfile.json" --threads="2" -v
+```
+
+![`./src/umi-injector.sh --in1=./test_data/read1.fastq.gz --in2=./test_data/read1.fastq.gz --umi=./test_data/umi.fastq.gz --out1=./test_data/read1_umi.fastq.gz --out2=./test_data/read2_umi.fastq.gz --sep="_" --logfile="./logfile.json" --threads="2" -v`](docs/full.svg)
+
+To print all available options and defaults to the console, run  `--help` or `-h`.
+
+![`./src/umi-injector.sh --help`](docs/help.svg)
+
 ## Building the containerized versions
 
 ### Building locally
@@ -27,7 +61,7 @@ To run the workflow successfully, you need to fork the repository and create you
 
 The workflow can be dispatched manually in the *Actions* tab. Choose the desired settings in the dialogue and launch the workflow run.
 
-## Running containerized umi-injector
+### Running containerized umi-injector
 
 To run the containerized version of umi-injector, invoke the container like so
 
