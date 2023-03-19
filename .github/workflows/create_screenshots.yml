@@ -26,3 +26,5 @@ jobs:
           commit_changes: "true"
           skip_git_checks: "true"
           clean_img_paths: docs/*.svg
+          terminal_theme: "MONOKAI"
+          use-pty: "true" 
