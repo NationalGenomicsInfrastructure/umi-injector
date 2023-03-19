@@ -20,6 +20,8 @@ Whatever DNA sequence is provided as `--umi` will be integrated into the header 
 
 The script will run a few basic validators on the provided arguments, but not corroborate matching read IDs. Thus, ensure that the files are sorted in a consistent order, otherwise the wrong UMIs will be integrated into the reads!
 
+<img src="docs/minimal_faulty_spec.svg" alt="Help display of umi-injector" style="width:100%;"/>
+
 You can specify `--sep=` to choose a different UMI separator than the default colon. For [umi-tools dedup](https://umi-tools.readthedocs.io/en/latest/), you will, for example, need to separate UMIs by an underscore.
 
 `--threads` will set the number of cores used by **each** pigz process. For every compressed file that you read or write, this number of threads will be used.

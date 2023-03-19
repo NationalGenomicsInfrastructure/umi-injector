@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="rich-terminal"
+   viewBox="0 0 1141 123.19999999999999"
+   version="1.1"
+   id="svg867"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Generated with Rich https://www.textualize.io -->
+  <style
+     id="style824">
+
+    @font-face {
+        font-family: &quot;Fira Code&quot;;
+        src: local(&quot;FiraCode-Regular&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2&quot;) format(&quot;woff2&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff&quot;) format(&quot;woff&quot;);
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: &quot;Fira Code&quot;;
+        src: local(&quot;FiraCode-Bold&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2&quot;) format(&quot;woff2&quot;),
+                url(&quot;https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff&quot;) format(&quot;woff&quot;);
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-1669106565-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-1669106565-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-1669106565-r1 { fill: #d9d9d9 }
+.terminal-1669106565-r2 { fill: #f4005f;font-weight: bold }
+    </style>
+  <defs
+     id="defs835">
+    <clipPath
+       id="terminal-1669106565-clip-terminal">
+      <rect
+         x="0"
+         y="0"
+         width="1121.3999999999999"
+         height="72.19999999999999"
+         id="rect826" />
+    </clipPath>
+    <clipPath
+       id="terminal-1669106565-line-0">
+      <rect
+         x="0"
+         y="1.5"
+         width="1122.4"
+         height="24.65"
+         id="rect829" />
+    </clipPath>
+    <clipPath
+       id="terminal-1669106565-line-1">
+      <rect
+         x="0"
+         y="25.9"
+         width="1122.4"
+         height="24.65"
+         id="rect832" />
+    </clipPath>
+  </defs>
+  <rect
+     fill="#0c0c0c"
+     stroke="rgba(255,255,255,0.35)"
+     stroke-width="1"
+     x="1"
+     y="1"
+     width="1139"
+     height="121.2"
+     rx="8"
+     id="rect837" />
+  <g
+     transform="translate(26,22)"
+     id="g845">
+    <circle
+       cx="0"
+       cy="0"
+       r="7"
+       fill="#ff5f57"
+       id="circle839" />
+    <circle
+       cx="22"
+       cy="0"
+       r="7"
+       fill="#febc2e"
+       id="circle841" />
+    <circle
+       cx="44"
+       cy="0"
+       r="7"
+       fill="#28c840"
+       id="circle843" />
+  </g>
+  <g
+     transform="translate(9, 41)"
+     clip-path="url(#terminal-1669106565-clip-terminal)"
+     id="g865">
+    <g
+       class="terminal-1669106565-matrix"
+       id="g863">
+      <text
+         class="terminal-1669106565-r1"
+         x="0"
+         y="20"
+         textLength="1122.4"
+         clip-path="url(#terminal-1669106565-line-0)"
+         id="text847">$ ./src/umi-injector.sh --in1=&quot;./test_data/read1.fastq.gz&quot; --umi=&quot;./test_data/umi.fastq.gz&quot; </text>
+      <text
+         class="terminal-1669106565-r1"
+         x="1122.4"
+         y="20"
+         textLength="12.2"
+         clip-path="url(#terminal-1669106565-line-0)"
+         id="text849" />
+      <text
+         class="terminal-1669106565-r1"
+         x="0"
+         y="44.4"
+         textLength="475.8"
+         clip-path="url(#terminal-1669106565-line-1)"
+         id="text851">--out1=&quot;./test_data/read1_umi.fastq.gz&quot;</text>
+      <text
+         class="terminal-1669106565-r1"
+         x="1122.4"
+         y="44.4"
+         textLength="12.2"
+         clip-path="url(#terminal-1669106565-line-1)"
+         id="text853" />
+      <text
+         class="terminal-1669106565-r1"
+         x="0"
+         y="68.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1669106565-line-2)"
+         id="text855" />
+      <text
+         class="terminal-1669106565-r2"
+         x="0"
+         y="68.8"
+         textLength="1098"
+         clip-path="url(#terminal-1669106565-line-2)"
+         id="text857"> Error:  ./test_data/read1_umi.fastq.gz already exists! Please choose -out1 differently </text>
+      <text
+         class="terminal-1669106565-r1"
+         x="1073.6"
+         y="68.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1669106565-line-2)"
+         id="text859" />
+      <text
+         class="terminal-1669106565-r1"
+         x="1122.4"
+         y="68.8"
+         textLength="12.2"
+         clip-path="url(#terminal-1669106565-line-2)"
+         id="text861" />
+    </g>
+  </g>
+</svg>
