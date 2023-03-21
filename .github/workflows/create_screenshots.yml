@@ -3,8 +3,7 @@ name: Create screenshots
 on:
   push:
     branches:
-      - dev
-      - staging
+      - screengrabs
     paths:
       - "**.md"
 
