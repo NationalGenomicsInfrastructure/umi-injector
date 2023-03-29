@@ -1,9 +1,14 @@
 params.read_triplets = "$projectDir/test_data/reads/reads_{1,2,3}*.gz"
 params.outdir = "results"
+params.cpus = 6
+params.memory = 6.GB
+params.time = 8.h
 
 process UMI_INJECTOR {
     container '/proj/ngi2016004/nobackup/singularity/images/umi-injector:0.0.1--a87c3de712ca.sif'
-    label 'process_medium'
+    cpus params.cpus
+    memory params.memory
+    time params.time
 
     input:
     tuple val(sample_id), path(read_triplets)
@@ -13,10 +18,11 @@ process UMI_INJECTOR {
 
     publishDir params.outdir
     script:
+    def threads = Math.round(Math.floor(task.cpus / 5))
     """
         umi-injector.sh --in1=${read_triplets[0]} --umi=${read_triplets[1]}  --in2=${read_triplets[2]} \
             --out1=${sample_id}_R1_with_umi.fastq.gz --out2=${sample_id}_R2_with_umi.fastq.gz \
-            --threads=${task.cpus} --sep=':'
+            --threads=$threads --sep=':'
     """
 }
 
