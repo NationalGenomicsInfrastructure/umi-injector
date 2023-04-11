@@ -24,7 +24,15 @@ The script will run a few basic validators on the provided arguments, but not co
 
 You can specify `--sep=` to choose a different UMI separator than the default colon. For [umi-tools dedup](https://umi-tools.readthedocs.io/en/latest/), you will, for example, need to separate UMIs by an underscore.
 
-`--threads` will set the number of cores used by **each** pigz process. For every compressed file that you read or write, this number of threads will be used.
+`--threads` will set the number of cores used by **each** pigz compression process. For every compressed file that you write, this number of threads will be used. Processes for reading compressed files will never use more than one thread, since there is no advantage of doing so.
+
+*umi-injector* is ideally run with 6 or more `task.cpus`. One thread is needed for the awk process, 3 threads for decompressing files and 2 for compression. Any further CPUs can be utilized to accelerate the two compression processes. A total of 8 `task.cpus` for example allows you to set `--threads=2`.
+
+The possible setting $t$ for the number of `--threads` can be calculated from the available `task.cpus` $c$ as follows:
+
+$$ t = 1 + \left( \left\lfloor \frac{c-6}{2}\right\rfloor \left( 1 - \left\lfloor \frac{2}{1 + 2 ^{c - 8}}\right\rfloor\right) \right)$$
+
+<img src="docs/threads.svg" alt="Help display of umi-injector" style="width:90%;"/>
 
 `--logfile` allows you to output a small log file in JSON format. The log will comprise the number of records processed and a sample header to assess the introduced changes. At the moment, `--verbose` just prints the runtime to the console.
 
@@ -37,7 +45,6 @@ umi-injector.sh --in1=./test_data/read1.fastq.gz --in2=./test_data/read1.fastq.g
 To print all available options and defaults to the console, run  `--help` or `-h`.
 
 <img src="docs/help.svg" alt="Help display of umi-injector" style="width:100%;"/>
-
 
 ## Building the containerized versions
 
@@ -79,6 +86,7 @@ To simplify the invocation, you can also declare an alias, which can be perpetua
 ```bash
 alias umi-injector="docker run --rm -itv $(pwd):$(pwd) -w $(pwd) umi-injector"
 ```
+
 ## License
 
 The code is released under the MIT License and so are the contents of this repository. See [LICENSE](LICENSE) for further details.

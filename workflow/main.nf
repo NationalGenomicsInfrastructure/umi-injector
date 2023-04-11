@@ -18,7 +18,7 @@ process UMI_INJECTOR {
 
     publishDir params.outdir
     script:
-    def threads = Math.round(Math.floor(task.cpus / 5))
+    def threads = 1 + (Math.floor((task.cpus - 6).div(2)) * (1 - Math.floor(2.div(1 + 2 ^ (task.cpus - 8)))))
     """
         umi-injector.sh --in1=${read_triplets[0]} --umi=${read_triplets[1]}  --in2=${read_triplets[2]} \
             --out1=${sample_id}_R1_with_umi.fastq.gz --out2=${sample_id}_R2_with_umi.fastq.gz \
