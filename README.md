@@ -30,7 +30,7 @@ You can specify `--sep=` to choose a different UMI separator than the default co
 
 The possible setting $t$ for the number of `--threads` can be calculated from the available `task.cpus` $c$ as follows:
 
-$$ t = 1 + \left( \left\lfloor \frac{c-6}{2}\right\rfloor \left( 1 - \left\lfloor \frac{2}{1 + 2 ^{c - 8}}\right\rfloor\right) \right)$$
+$$ t = 1 + \left( \left\lfloor \frac{c-6}{2}\right\rfloor \left( 1 - \left\lfloor \frac{2}{1 + 2 ^{c - 7}}\right\rfloor\right) \right)$$
 
 <img src="docs/threads.svg" alt="Help display of umi-injector" style="width:90%;"/>
 
