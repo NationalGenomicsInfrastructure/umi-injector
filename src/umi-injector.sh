@@ -40,7 +40,7 @@ help() {
                 "-4 / --out2=" "optional output for the mated reads"   "${out2}" \
                 "-u / --umi=" "FastQ file with the matched UMIs"   "${umi}" \
                 "-l / --logfile=" "optional path to logfile"   "${logger}" \
-                "-n / --threads=" "PER FILE threads for (de)compression"   "${threads}" \
+                "-n / --threads=" "PER FILE threads for compression"   "${threads}" \
                 "-s / --sep=" "separator between readname and UMI"   "${sep}" 
     echo -e "\n  Lycka till, ${USER}!"
     exit 0; }
@@ -95,7 +95,8 @@ fi
 
 for input in ${in1} ${umi} ${in2}; do
     if [[ $(file "$input") == *"compressed"* ]]; then
-        filehandles+=("pigz -cd -p ${threads} \"$input\"")
+        # decompression in pigz does not benefit from mutiple threads, so the -p flag is skipped here.
+        filehandles+=("pigz -cd \"$input\"")
     else
         filehandles+=("cat \"$input\"")
     fi

@@ -1,0 +1,8 @@
+.DS_Store
+docs/.DS_Store
+*.sif
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.log
