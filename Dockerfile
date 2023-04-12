@@ -6,5 +6,6 @@ RUN apk add --no-cache bash file gawk pigz
 
 COPY ./src/umi-injector.sh /bin/umi-injector.sh
 RUN chmod +x /bin/umi-injector.sh
-ENTRYPOINT ["/bin/umi-injector.sh"]
+RUN ln -s /bin/umi-injector.sh /bin/umi-injector
+ENTRYPOINT ["/bin/umi-injector"]
 
